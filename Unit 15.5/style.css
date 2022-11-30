@@ -1,0 +1,170 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 0 10px;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.chat__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+}
+
+.form__input {
+  width: 360px;
+  height: 40px;
+  padding: 5px;
+  border: 3px solid rgb(150, 195, 255);
+  outline-color: rgb(38, 107, 196);
+  outline-width: 2px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.form__btn {
+  width: 120px;
+  height: 40px;
+  margin-left: 10px;
+  padding: 5px 5px;
+  box-shadow: 0 0 5px rgba(156, 156, 156, 0.5);
+  background-color: rgb(150, 195, 255);
+  border: 5px solid rgb(150, 195, 255);
+}
+
+.form__btn:hover {
+  color: rgb(151, 151, 151);
+  background-color: rgb(255, 255, 255);
+}
+
+.main {
+  width: 620px;
+  min-height: 400px;
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgba(156, 156, 156, 0.5);
+  border: 5px solid rgb(150, 195, 255);
+  background-image: url(background-chat.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.field__inner {
+  margin: 5px 0px 15px;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-text {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  background-color: #fff;
+  padding: 5px;
+  padding-top: 12px;
+}
+
+.field-client {
+  margin-left: 340px;
+  width: 250px;
+  min-height: 50px;
+  border: 4px solid rgb(150, 195, 255);
+  border-radius: 10px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.field-server {
+  margin-right: 340px;
+  width: 250px;
+  min-height: 50px;
+  border: 4px solid rgb(150, 195, 255);
+  border-radius: 10px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+
+@media (max-width: 735px) {
+  .chat__inner {
+    flex-direction: column-reverse;
+  }
+  .form {
+    width: 310px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form__input {
+    width: 310px;
+    font-size: 12px;
+  }
+  .form__btn {
+    margin-top: 10px;
+    width: 150px;
+    font-size: 12px;
+    margin-left: 0px;
+  }
+  .form .form__btn:nth-child(2) {
+    margin-right: 10px;
+  }
+  .main {
+    width: 310px;
+  }
+  .field-text {
+    padding-top: 5px;
+  }
+  .field-client {
+    width: 125px;
+    min-height: 35px;
+    margin-left: 155px;
+    font-size: 12px;
+  }
+  .field-server {
+    width: 125px;
+    min-height: 35px;
+    margin-right: 155px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .form {
+    width: 270px;
+  }
+  .form__input {
+    width: 270px;
+    font-size: 12px;
+  }
+  .form__btn {
+    width: 130px;
+    font-size: 11px;
+  }
+  .main {
+    width: 270px;
+  }
+  .field-client {
+    min-height: 30px;
+    font-size: 11px;
+    margin-left: 115px;
+  }
+  .field-server {
+    min-height: 30px;
+    font-size: 11px;
+    margin-right: 115px;
+  }
+}
